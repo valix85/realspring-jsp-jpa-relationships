@@ -20,4 +20,6 @@ public interface FilmRepository extends JpaRepository<Film, Long> {
     @Query(value="select * from film order by RAND() LIMIT 0,1", nativeQuery = true)
     Film getOneRandom();
 
+    List<Film> findByCouponIsNull();
+
 }//end class

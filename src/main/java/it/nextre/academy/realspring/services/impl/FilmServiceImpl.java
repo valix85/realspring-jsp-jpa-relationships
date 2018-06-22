@@ -92,4 +92,10 @@ public class FilmServiceImpl implements FilmService {
     public Film getRandomFilm() {
         return filmRepository.getOneRandom();
     }
+
+
+    @Override
+    public List<Film> getFilmWithoutCoupon() {
+        return filmRepository.findByCouponIsNull();
+    }
 }//end class

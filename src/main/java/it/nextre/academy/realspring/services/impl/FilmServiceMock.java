@@ -128,4 +128,10 @@ public class FilmServiceMock implements FilmService {
         //TODO fare metodo
         return null;
     }
+
+    @Override
+    public List<Film> getFilmWithoutCoupon() {
+        //TODO fare metodo
+        return null;
+    }
 }//end class

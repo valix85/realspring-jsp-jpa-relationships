@@ -32,7 +32,11 @@ public class CouponServiceImpl implements CouponService {
 
     @Override
     public Coupon save(Coupon c) throws Exception {
-        return couponRepository.save(c);
+        if (c!=null && c.getCode().length()>0 && c.getSold().doubleValue()>0 && c.getSold().doubleValue()<10) {
+            return couponRepository.save(c);
+        }else{
+            throw new Exception("Coupon non valido");
+        }
     }
 
     @Override

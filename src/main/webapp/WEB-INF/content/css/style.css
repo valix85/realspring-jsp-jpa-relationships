@@ -14,6 +14,10 @@ h2 {
     border-bottom: 1px solid #581822;
 }
 
+.error{
+    color: red;
+}
+
 .logo{
     max-width: 48px;
     max-height: 48px;

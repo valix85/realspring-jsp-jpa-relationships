@@ -20,4 +20,6 @@ public interface FilmService {
 
     public Film getRandomFilm();
 
+    List<Film> getFilmWithoutCoupon();
+
 }
