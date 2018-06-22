@@ -71,6 +71,7 @@ public class Film {
                 ", prezzo=" + prezzo +
                 ", coupon=" + (coupon!=null?coupon.getId():"null") +
                 ", dischi=" + dischi +
+                ", attori=" + cast +
                 '}';
     }
 }//end class

@@ -6,12 +6,13 @@ import lombok.*;
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
 
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter @Setter
-@ToString
 @Table(name="attore")
 public class Attore {
     @Id
@@ -44,5 +45,16 @@ public class Attore {
             return films.add(f);
         }
         return false;
+    }
+
+    @Override
+    public String toString() {
+        return "Attore{" +
+                "id=" + id +
+                ", nome='" + nome + '\'' +
+                ", cognome='" + cognome + '\'' +
+                ", sesso='" + sesso + '\'' +
+                ", films=" + films.stream().map(f->f.getId()).collect(Collectors.toList()) +
+                '}';
     }
 }//end class
