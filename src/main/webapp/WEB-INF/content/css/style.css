@@ -37,3 +37,6 @@ h2 {
 .container h2 {
     text-align:right;
 }
+
+
+.lista-film > li {margin-bottom:100px;}

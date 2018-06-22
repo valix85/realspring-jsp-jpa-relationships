@@ -1,5 +1,6 @@
 package it.nextre.academy.realspring.services;
 
+import it.nextre.academy.realspring.entities.Disco;
 import it.nextre.academy.realspring.entities.Film;
 
 import java.util.List;
@@ -14,5 +15,9 @@ public interface FilmService {
     public Film add(Film f) throws Exception;
     public Film save(Film f) throws Exception;
     public boolean delete(Film f) throws Exception;
+
+    public Film addDiscoToFilm(Film f, Disco d);
+
+    public Film getRandomFilm();
 
 }

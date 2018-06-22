@@ -1,5 +1,6 @@
 package it.nextre.academy.realspring.services.impl;
 
+import it.nextre.academy.realspring.entities.Disco;
 import it.nextre.academy.realspring.entities.Film;
 import it.nextre.academy.realspring.repositories.FilmRepository;
 import it.nextre.academy.realspring.services.FilmService;
@@ -81,4 +82,14 @@ public class FilmServiceImpl implements FilmService {
         }
     }
 
+    @Override
+    public Film addDiscoToFilm(Film f, Disco d) {
+        f.getDischi().add(d);
+        return f;
+    }
+
+    @Override
+    public Film getRandomFilm() {
+        return filmRepository.getOneRandom();
+    }
 }//end class

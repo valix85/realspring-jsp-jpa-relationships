@@ -1,5 +1,6 @@
 package it.nextre.academy.realspring.services.impl;
 
+import it.nextre.academy.realspring.entities.Disco;
 import it.nextre.academy.realspring.entities.Film;
 import it.nextre.academy.realspring.services.FilmService;
 import org.apache.log4j.Logger;
@@ -22,6 +23,7 @@ public class FilmServiceMock implements FilmService {
     private List<Film> videoteca = new ArrayList<>();
 
     {
+        /*
         videoteca.add(new Film(1, "300", "Zack Snyder", 2007));
         videoteca.add(new Film(2, "Pacific Rim", "Guillermo del Toro", 2013));
         videoteca.add(new Film(3, "Dunkirk", "Christopher Nolan", 2017));
@@ -30,6 +32,7 @@ public class FilmServiceMock implements FilmService {
         videoteca.add(new Film(6, "Arancia Meccanica", "Stanley Kubrick", 1971));
         videoteca.add(new Film(7, "Shining", "Stanley Kubrick", 1980));
         videoteca.add(new Film(8, "Italiano medio", "Marcello Macchia", 2015));
+        */
     }
 
 
@@ -114,4 +117,15 @@ public class FilmServiceMock implements FilmService {
         //return false;
     }
 
+    @Override
+    public Film addDiscoToFilm(Film f, Disco d) {
+        //TODO fare metodo
+        return null;
+    }
+
+    @Override
+    public Film getRandomFilm() {
+        //TODO fare metodo
+        return null;
+    }
 }//end class
